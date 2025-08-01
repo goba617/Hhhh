@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #nm{font-size:20px;}
+      button{font-size:20px;
+        margin:8px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <button onclick="help()">幫助</button>
+    <p id="help"></p>
+    <input id="nm" type="text" placeholder="你的名字"><br>
+    <h3>選擇你的種族</h3>
+    <button onclick="people()">人</button>
+    <button onclick="fox()">狐</button><br>
+    <button onclick="decide()">決定！</button><br>
+    <button onclick="chImf()">資訊</button>
+    <p id="chType"></p>
+    <p id="characterName"></p>
+    <script>
+    let peotime = 0;
+    let chName ="";
+      function help(){document.getElementById("help").innerText="狐族：速度*1.2\n人族：打坐修為+1";}
+      function decide(){chName=document.getElementById("nm").value;
+      }
+      function people(){peotime=peotime+1;
+      if(peotime>1){alert("nope");
+        peotime=peotime-1;
+      }
+      }
+      function chImf(){document.getElementById("characterName").innerText="名字："+ chName;}
+    </script>
+  </body>
+</html>
 
