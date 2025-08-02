@@ -9,6 +9,8 @@
       }
       #firstImf{display:block;}
       #chap1{display:none;}
+      #chap2{display:none;}
+      .disapp{display:none;}
     </style>
   </head>
   <body>
@@ -23,15 +25,40 @@
     <button onclick="decide()">決定！</button><br>
     </div>
     <button onclick="chImf()">資訊</button>
+    <button onclick="sitting()" class="disapp" id="sit">打坐</button>
     <p id="chType"></p>
     <p id="characterName"></p>
+    <p id="cultivation"></p>
     <div id="chap1">
     <button onclick="start()">開始旅途</button>
+    </div>
+    <div id="chap2">
+      <h3>第一篇</h3>
+      <p>一片混沌中，你睜開眼睛，四下皆是朦朧的金光，你隱約看到兩個一個略微黝黑及一個雪白的巨大身影，你耳裡傳來一句話：吾等已無力抵抗，世界急須新神，阻止”剎努司”...</p>
+      <button onclick="contin1()" id="contin2">繼續</button>
+    </div>
+    <div class="disapp" id="chap3">
+      <p>你睜開眼，眼前是一個沉穩的男性和一個活潑的女性</p>
+      <p>女性：這人帶上來都已經3天了怎麼還不醒</p>
+      <p>男性：可能...等等，快看，他醒了</p>
+      <p>女性：嗨！你醒了</p>
+      <button onclick="openSit()" id="openSit2">繼續</button>
+    </div>
+    <div class="disapp" id="chap4">
+      <p>女性：我叫“凝相”，那個死板著臉的人是桓霄，別看他這樣，其實他很樂於助人，而且很聰明</p>
+      <p>桓霄：你有練過功嗎？</p>
+      <p>你搖搖頭說了聲沒有...</p>
+      <p>桓霄：呃.好吧，我教你，你可以去打坐每次打坐基礎都是增加2點修為，不過這會因為你的種族，悟性和其他因素影響</p>
+      <p>（解鎖打坐按鈕）</p>
+      <button onclick="Iknow()" id="iknow">我知道了</button>
     </div>
     <script>
     let peotime = 0;
     let chName ="";
     let race="";
+    let fsitfor=2;
+    let sitfor=0;
+    let cult=0;
       function help(){document.getElementById("help").innerText="狐族：速度*1.2\n人族：打坐修為+1";}
       function decide(){chName=document.getElementById("nm").value;
       document.getElementById("firstImf").style.display="none";
@@ -45,13 +72,30 @@
       }
       function chImf(){document.getElementById("characterName").innerText="名字："+ chName;
         document.getElementById("chType").innerText="種族："+race;
+        document.getElementById("cultivation").innerText="修為："+cult;
       }
       function fox(){peotime=peotime+1;
       race="狐族";
       if(peotime>1){alert("nope");
         peotime=peotime-1;
       }}
-      function start(){document.getElementById("chap1").style.display="block";}
+      function start(){document.getElementById("chap1").style.display="block";
+        document.getElementById("chap2").style.display="block";
+      }
+      function contin1(){document.getElementById("chap3").style.display="block";
+        document.getElementById("contin2").style.display="none";
+      }
+      function openSit(){document.getElementById("chap4").style.display="block";
+        document.getElementById("openSit2").style.display="none";
+      }
+      function Iknow(){document.getElementById("sit").style.display="block";
+        document.getElementById("iknow").style.display="none";
+      }
+      function sitting(){
+        if(race==="人族"){sitfor = fsitfor+1;}
+        else if(race==="狐族"){sitfor=fsitfor;};
+        cult = cult+sitfor;
+      }
     </script>
   </body>
 </html>
