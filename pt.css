@@ -1,0 +1,15 @@
+body{
+  #nm{font-size:20px;}
+      button{font-size:20px;
+        margin:8px;
+      }
+      #firstImf{display:block;}
+      #chap1{display:none;}
+      #chap2{display:none;}
+      .disapp{display:none;}
+      #sit{font-size:42px;}
+      #normalscreen{display:block;}
+      #battlescreen{display:none;
+        font-size:20px;
+      }
+}
