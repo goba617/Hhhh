@@ -74,10 +74,10 @@ function sitting(){
 }
 function Wtier(){
   if(cult<200){chaTier="凡人";}
-  else if(200<=cult,cult<500){chaTier="凝氣前期";}
-  else if(500<=cult,cult<800){chaTier="凝氣中期";}
-  else if(800<=cult,cult<1100){chaTier="凝氣後期";}
-  else if(1100<=cult,cult<=1500){chaTier="凝氣圓滿";};
+  else if(200<=cult&&cult<500){chaTier="凝氣前期";}
+  else if(500<=cult&&cult<800){chaTier="凝氣中期";}
+  else if(800<=cult&&cult<1100){chaTier="凝氣後期";}
+  else if(1100<=cult&&cult<=1500){chaTier="凝氣圓滿";};
   document.getElementById("tier").innerText="境界："+chaTier;}
 function firstbattle(){document.getElementById("normalscreen").style.display="none";
   document.getElementById("battlescreen").style.display="block";
@@ -99,6 +99,7 @@ function attack1(){
     if(eneheal<=0){
       alert("別打了他死了");
       alert("戰鬥結束了");
+      cult=cult+5;
       document.getElementById("normalscreen").style.display="block";
       document.getElementById("battlescreen").style.display="none";
       document.getElementById("first").style.display="none";
