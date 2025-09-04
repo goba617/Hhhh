@@ -22,6 +22,10 @@ let youhealth=0;
 //戰鬥中的//
 let eneSkill=0;
 //敵人技能//
+let backpack=[];
+let ironswordT3=[6,"ironswordT3"];
+//微損的鐵劍傷害//
+//規律：第一項為傷害，第二項為名字//
 function help(){document.getElementById("help").innerText="狐族：速度1.2\n人族：打坐修為+1";}
 function decide(){
   chName=document.getElementById("nm").value;
@@ -74,10 +78,10 @@ function sitting(){
 }
 function Wtier(){
   if(cult<200){chaTier="凡人";}
-  else if(200<=cult&&cult<500){chaTier="凝氣前期";}
-  else if(500<=cult&&cult<800){chaTier="凝氣中期";}
-  else if(800<=cult&&cult<1100){chaTier="凝氣後期";}
-  else if(1100<=cult&&cult<=1500){chaTier="凝氣圓滿";};
+  else if(200<=cult,cult<500){chaTier="凝氣前期";}
+  else if(500<=cult,cult<800){chaTier="凝氣中期";}
+  else if(800<=cult,cult<1100){chaTier="凝氣後期";}
+  else if(1100<=cult,cult<=1500){chaTier="凝氣圓滿";};
   document.getElementById("tier").innerText="境界："+chaTier;}
 function firstbattle(){document.getElementById("normalscreen").style.display="none";
   document.getElementById("battlescreen").style.display="block";
@@ -86,6 +90,7 @@ function firstbattle(){document.getElementById("normalscreen").style.display="no
   document.getElementById("enemyhealth").innerText="血量："+eneheal;
   youhealth=heal;
   document.getElementById("yourhealth").innerText="你的血量："+youhealth;
+  document.getElementById("first").style.display="none"; 
 }
 function attack1(){
   if(eneheal>0){
@@ -99,13 +104,21 @@ function attack1(){
     if(eneheal<=0){
       alert("別打了他死了");
       alert("戰鬥結束了");
-      cult=cult+5;
       document.getElementById("normalscreen").style.display="block";
       document.getElementById("battlescreen").style.display="none";
-      document.getElementById("first").style.display="none";
-      document.getElementById("firstbat").style.display="none";
+      document.getElementById("chap6").style.display="block";
     };
   };
 }
+function pick(){
+  document.getElementById("normalscreen").style.display="none";
+  document.getElementById("backpack").style.display="block";
+  backpack.push(ironswordT3);
+  document.getElementById("weapon").innerText="背包內武器："+backpack[0][1];
+}
+function decideBPW(){
+  
+}
+
 
 
