@@ -54,15 +54,26 @@
       <p>大叔：狼群又要來了，欸？你醒了啊</p>
       <p>凝相：他是楊世源，別看他老老的還拿著個拐杖，他的力量可不容小覷</p>
       <p>楊世源：你應該不知道獸潮吧，通常獸潮就是一群怪獸集結一起攻擊人類，規模可大可小，好在這次獸潮規模很小，構不成太大威脅，他們要來了，你也來幫我們吧</p>
-      <button onclick="firstbattle()" id="firstbat">迎戰！</button>
+      <button onclick="firstbattle()" id="first">迎戰！</button>
+    <div id="chap6" class="disapp">
+      <p>楊世元：身手不錯，就是有點...野蠻。你應該先學一些功法，或是拿點武器，別再跟那群長著尖牙利爪的狼打自由搏擊了。旁邊有一把微微破損的鐵劍，勉強用用吧。然後去找桓霄，他擅長使用近戰的武器一尤其是長槍。</p>
+      <button onclick="pick()">撿起”微微受損的劍”</button>
+    </div>
     </div>
     </div>
     <div id="battlescreen">
       <p id="enemyname"></p>
       <p id="enemyhealth"></p>
-      <button onclick="attack1()">給他一拳</button>
+      <button onclick="attack1()" >給他一拳</button>
       <p id="yourhealth"></p>
+    </div>
+    <div id="backpack" class="disapp">
+      <p>裝備武器方法：在輸入框裡輸入要裝備的武器名稱按確定</p>
+      <input id="backpackWeapon">
+      <button onclick="decideBPW()">確認</button>
+      <p id="weapon"></p>
     </div>
     <script src="pt.js"></script>
   </body>
 </html>
+
