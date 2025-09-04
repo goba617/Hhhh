@@ -117,7 +117,9 @@ function pick(){
   document.getElementById("weapon").innerText="背包內武器："+backpack[0][1];
 }
 function decideBPW(){
-  
+  document.getElementById("backpackWeapon").value=WeaponC;
+  document
+  //裝備了//
 }
 
 
