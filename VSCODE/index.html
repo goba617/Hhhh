@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="normalscreen">
+    <button onclick="help()">幫助</button>
+    <p id="help"></p>
+    <div id="firstImf">
+      <p><strong>注意：請確定名字打好了種族選好了再按「決定」按鈕，然後這是一次性的網頁一關資料就沒了呵呵</strong></p><br>
+    <input id="nm" type="text" placeholder="你的名字"><br>
+    <h3>選擇你的種族</h3>
+    <button onclick="people()">人</button>
+    <button onclick="fox()">狐</button><br>
+    <button onclick="decide()">決定！</button><br>
+    </div>
+    <button onclick="chImf()">資訊</button>
+    <button onclick="Wtier()">境界</button>
+    <button onclick="sitting()" class="disapp" id="sit">打坐</button>
+    <p id="chType"></p>
+    <p id="characterName"></p>
+    <p id="cultivation"></p>
+    <p id="realm"></p>
+    <p id="attack"></p>
+    <p id="health"></p>
+    <p id="tier"></p>
+    <div id="chap1">
+    <button onclick="start()" id="start">開始旅途</button>
+    </div>
+    <div id="chap2">
+      <h3>第一篇</h3>
+      <p>一片混沌中，你睜開眼睛，四下皆是朦朧的金光，你隱約看到兩個一個略微黝黑及一個雪白的巨大身影，你耳裡傳來一句話：吾等已無力抵抗，世界急須新神，阻止”剎帝”...</p>
+      <button onclick="contin1()" id="contin2">繼續</button>
+    </div>
+    <div class="disapp" id="chap3">
+      <p>你睜開眼，眼前是一個沉穩的男性和一個活潑的女性</p>
+      <p>女性：這人帶上來都已經3天了怎麼還不醒</p>
+      <p>男性：可能...等等，快看，他醒了</p>
+      <p>女性：嗨！你醒了</p>
+      <button onclick="openSit()" id="openSit2">繼續</button>
+    </div>
+    <div class="disapp" id="chap4">
+      <p>女性：我叫“凝相”，那個死板著臉的人是桓霄，別看他這樣，其實他很樂於助人，而且很聰明</p>
+      <p>桓瀧：你有練過功嗎？</p>
+      <p>你搖搖頭說了聲沒有...</p>
+      <p>桓瀧：呃.好吧，我教你，你可以去打坐每次打坐基礎都是增加2點修為，不過這會因為你的種族和其他因素影響，修為達到一段強度後就不會增加，需要渡劫才能繼續提升</p>
+      <p>（解鎖打坐按鈕）</p>
+      <button onclick="Iknow()" id="iknow">我知道了</button>
+    </div>
+    <div class="disapp" id="chap5">
+      <p>此時，一個看起來身材高挑，頭髮微微發白，有點年紀的大叔過來</p>
+      <p>大叔：狼群又要來了，欸？你醒了啊</p>
+      <p>凝相：他是楊世源，別看他老老的還拿著個拐杖，他的力量可不容小覷</p>
+      <p>楊世源：你應該不知道獸潮吧，通常獸潮就是一群怪獸集結一起攻擊人類，規模可大可小，好在這次獸潮規模很小，構不成太大威脅，他們要來了，你也來幫我們吧</p>
+      <button onclick="firstbattle()" id="first">迎戰！</button>
+    <div id="chap6" class="disapp">
+      <p>楊世元：身手不錯，就是有點...野蠻。你應該先學一些功法，或是拿點武器，別再跟那群長著尖牙利爪的狼打自由搏擊了。旁邊有一把微微破損的鐵劍，勉強用用吧。</p>
+      <button id="pickFirstWeapon">撿起微微破損的長槍</button>
+    </div>
+    </div>
+    </div>
+    <div id="battlescreen">
+      <p id="enemyname"></p>
+      <p id="enemyhealth"></p>
+      <button onclick="attack1()" >給他一拳</button>
+      <p id="yourhealth"></p>
+    </div>
+    <div id="backpack" class="disapp">
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
